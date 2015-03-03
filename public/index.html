@@ -1,68 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-  <title>5 minute fork</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset=utf-8 />
   <link href='/icon.png' rel='icon' type="image/png" />
 </head>
 <body>
-  <h1>5 minute fork</h1>
-  <form id="serveForm">
-    <label>Github url <input type="text" placeholder="github.com/user/repo" id="input" required pattern="(?:https?:\/\/)?(?:www\.)?github\.com\/([^\/]+\/[^\/]+?(?:\/tree\/[^\/]+)?)(?:\.git)?$" title="github.com/<user>/<repo> or
-github.com/<user>/<repo>/tree/<branch>"></label>
-    <button type="submit">Serve!</button>
-    <div id="error" style="display: none"></div>
-  </form>
-  <p>As described on hackernews:</p>
-  <blockquote><p>If a github repo has an index.html file and you click on it, github will show you the source instead of the webpage.<br><br>5minfork shows you the webpage so that you can have an idea of what the repo is about.</p></blockquote>
-  <h2 id="why">Why?</h2>
-  <p>Heard of 10 minute email? Well this is the same thing, except for github repos.</p>
-
-  <p>The number of times I've come across a cool demo, only to be faced with a github repo and no live link - it just bums me out.</p>
-
-  <p>So I made this (quickly - literally about 90 minutes), which reads the url, and forks the project. If the url is idle for 5 minutes, then it's automatically discarded and swept under the carpet. I wrote up more <a href="http://remysharp.com/2013/03/18/quick-dirty-forking/">detail about 5minfork</a> on my blog if you're interested.</p>
-
-  <p><em>Want to say thanks?</em> <a class="flattr" href="http://flattr.com/thing/1463468/remy5minutefork-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></p>
-
-  <h2 id="how_to_fork">How to fork for 5 minutes</h2>
-  <p>Simply take a public github url and swap out the <code>https://github.com</code> for <code>http://5minfork.com</code>, add <code>/tree/branch-name</code> if you want a specific branch, wait a moment for the project to be cloned, and then you'll be redirected to a unique url which will serve up static content from the project.</p>
-
-  <h2 id="browser_tools">Browser Tools</h2>
-  <p>Users contributed tools that make creating a 5minfork easier. Below shows the Chrome extension and user.script in action:</p>
-  <p><img src="/images/extension-preview.png"></p>
-  <ul>
-    <li><a href="https://chrome.google.com/webstore/detail/5-minute-fork/idfhgkibldeniiijlnenfhlilhbifbff?hl=en&gl=GB">Chrome extension</a> &mdash; loaded via the Chrome Web Store</li>
-    <li><a href="/userscript/5minfork.user.js">user.script</a> &mdash; compatible with Chrome &amp; Grease Monkey</li>
-    <li><a href="javascript:void(function(){var l=window.location;if(l.host=='github.com')window.location='http://5minfork.com'+l.pathname}())">5minfork Bookmarklet</a> &mdash; drag to you bookmark bar</li>
-  </ul>
-
-  <h2 id="fork_this">Fork this?</h2>
-  <p>If you're interested in the code, have found a bug, want to fix a bug, have written a browser extension (go on - you know you want to) - the code is <a href="http://rem.mit-license.org/">freely</a> available on github: <a href="https://github.com/remy/5minutefork">https://github.com/remy/5minutefork</a></p>
-  <p>Enjoy &mdash; <a href="http://twitter.com/rem">@rem</a></p>
-  <script>
-    (function () {
-      var form = document.getElementById("serveForm");
-      var input = document.getElementById("input");
-      var error = document.getElementById("error");
-
-      var GITHUB_URL_RE = new RegExp(input.pattern);
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        var url = input.value;
-
-        // fallback for browsers that don't support the `pattern` attribute or
-        // showing an notification when validation fails
-        if (!GITHUB_URL_RE.test(url)) {
-          error.textContent = "URL must match either " + input.title;
-          error.style.display = "block";
-        } else {
-          // Remove the github url and use the pathname
-          location.pathname = url.replace(GITHUB_URL_RE, "$1");
-        }
-      }, false)
-    }());
-  </script>
+	<p>This is an internal tools for Slidedeck. Visit <a href="http://slidedeck.io">slidedeck.io</a></p>
 </body>
 </html>

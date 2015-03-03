@@ -2,15 +2,13 @@
 <html>
 <head>
   <meta charset=utf-8 />
-  <title>Forking (actually cloning) in action...</title>
-  <link rel="stylesheet" type="text/css" href="/style.css">
+  <title>Preparing {{owner.login}}/{{name}}</title>
+  <link rel="stylesheet" type="text/css" href="http://slidedeckcontents.antistatique.io/style.css">
   <link href='/icon.png' rel='icon' type="image/png" />
 </head>
 <body>
-  <h1><span id="spinner">⣾</span> <span>Loading your 5 minute fork</span></h1>
+  <h1><span id="spinner">⣾</span> <span>Loading</span></h1>
   <p>Forking &mdash; <code>https://github.com/{{owner.login}}/{{name}}</code></p>
-  <p>This shouldn't take too long, we're just cloning the project which takes a series of seconds.</p>
-  <p>Once cloned, this url will automatically clean itself up and remove the files after 5 minutes of idle time.</p>
   <script>
   var spin = "⣷⣯⣟⡿⢿⣻⣽⣾",
     title = document.getElementById('spinner'),

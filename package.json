@@ -1,7 +1,8 @@
 {
-  "name": "5minfork",
+  "name": "slidedeckcontents",
   "version": "0.1.0",
-  "description": "Quickly creates a fork of a github project for experimentation, and automatically removes after 5 minutes of inactivity",
+  "description": "Quickly creates a fork of a github project for experimentation, based on 5minforks by Remy Sharp",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
